@@ -1,1 +1,15 @@
-@import '~bootstrap/scss/bootstrap';
+$primary: #FAAF19;
+$dark: #243740;
+$light: #fff;
+$secondary: #4D5E66;
+
+$body-bg: $light;
+
+$headings-font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
+$font-family-sans-serif: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !default;
+
+@import "~bootstrap/scss/bootstrap";
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;

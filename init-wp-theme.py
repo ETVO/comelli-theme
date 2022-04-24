@@ -4,7 +4,23 @@ import os
 
 modules = 'laravel-mix bootstrap bootstrap-icons @popperjs/core'
 
-print("• Initialize WordPress Theme")
+print("")
+print("oooooooooooo    ooooooooooooooo    oooo       oooo      oooooooooooo ")
+print("oooooooooooo    ooooooooooooooo    oooo       oooo     oooooooooooooo")
+print("oooo                 ooooo         oooo       oooo     oooo      oooo")
+print("oooo                 ooooo         oooo       oooo     oooo      oooo")
+print("ooooooooo            ooooo         oooo       oooo     oooo      oooo")
+print("ooooooooo            ooooo         oooo       oooo     oooo      oooo")
+print("oooo                 ooooo          oooo     oooo      oooo      oooo")
+print("oooo                 ooooo           oooo   oooo       oooo      oooo")
+print("oooooooooooo         ooooo             ooooooo         oooooooooooooo")
+print("oooooooooooo         ooooo              ooooo           oooooooooooo ")
+
+print("\nby Estevão Rolim\n")
+
+print("• Initialize WordPress Theme •")
+
+exit
 
 theme_info = {
     'theme_name': input('Theme Name: '), 
@@ -23,7 +39,7 @@ Author: {}
 Author URI: {}
 Description: {}
 Version: 1.0
-*/""".format(*theme_info))
+*/""".format(*list(theme_info.values())))
 stylesheet.close()
 
 print("• Initializing Node Modules")
@@ -111,11 +127,12 @@ for f in template_files:
     newfile.close()
 
 
+print("\n• Running npx mix")
 subprocess.run('npx mix', shell=True, check=False)
 
 print('• Finished initializing WordPress theme')
 
-run_watch = input('• Initialize git repo(Y/N)? ')
+run_watch = input('• Initialize git repo (Y/N)? ')
 if run_watch == 'y' or run_watch == 'Y':
     subprocess.check_call('git init', shell=True)
     subprocess.check_call('git add -A', shell=True)
