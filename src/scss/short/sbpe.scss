@@ -1,0 +1,191 @@
+$bg-color: #FAAF19;
+$tilt: 25vh;
+$tilt-lg: 15vh;
+$tilt-md: 10vh;
+
+.short-sbpe {
+    position: relative;
+    
+    .texture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .35;
+        mix-blend-mode: multiply;
+        z-index: 1;
+        clip-path: polygon(0% $tilt, 100% 0%, 100% calc(100% - $tilt), 0% 100%);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        top: 0;
+        left: 0;
+    
+        background-color: $bg-color;  
+        
+        clip-path: polygon(0% $tilt, 100% 0%, 100% calc(100% - $tilt), 0% 100%);
+    }
+    
+    .content {
+        padding: calc($tilt + 2rem) 0 calc($tilt + 1rem);
+
+        .container {
+            position: relative;
+            z-index: 2;
+            .title {
+                width: 50%;
+                min-height: 200px;
+                position: relative;
+                display: flex;
+                img {
+                    position: absolute;
+                    z-index: 1;
+
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                h2 {
+                    position: relative;
+                    z-index: 2;
+                    
+                    padding: 2.5rem 3rem 3rem;
+                    text-align: right;
+                    color: var(--bs-dark);
+                    line-height: 1.25;
+                    font-weight: 600;
+                    margin: auto;
+                    font-size: calc(1.5rem + 1.5vw);
+                    
+                    span {
+                        color: var(--bs-dark);
+                        padding: 0 .25rem;
+                        background-color: #FFE14D;
+                    }
+                }
+            }
+
+            .text-wrap {
+                width: 30%;
+                display: flex;
+
+                .text {
+                    position: relative;
+                    z-index: 2;
+
+                    color: var(--bs-dark);
+                    margin: auto;
+                    
+                    font-weight: 500;
+                    font-size: 1.1rem;
+
+                    b {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .short-sbpe {
+    
+        .texture {
+            clip-path: polygon(0% $tilt-lg, 100% 0%, 100% calc(100% - $tilt-lg), 0% 100%);
+        }
+    
+        &::before {  
+            clip-path: polygon(0% $tilt-lg, 100% 0%, 100% calc(100% - $tilt-lg), 0% 100%);
+        }
+        
+        .content {
+            padding: calc($tilt-lg + 2rem) 0 calc($tilt-lg + 1rem);
+            
+            .container {
+                .text-wrap {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    .short-sbpe {
+    
+        .texture {
+            clip-path: polygon(0% $tilt-md, 100% 0%, 100% calc(100% - $tilt-md), 0% 100%);
+        }
+    
+        &::before {  
+            clip-path: polygon(0% $tilt-md, 100% 0%, 100% calc(100% - $tilt-md), 0% 100%);
+        }
+        
+        .content {
+            padding: calc($tilt-md + 2rem) 0 calc($tilt-md + 1rem);
+
+            .container {
+                flex-flow: column;
+                .title {
+                    width: 100%;
+
+                    img {
+                        width: auto;
+                    }
+
+                    h2 {
+                        margin-left: 0;
+                    }
+                }
+                .text-wrap {
+                    margin-top: 2rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 576px) {
+    .short-sbpe {
+        .content {
+            padding-left: .25rem;
+            padding-right: .25rem;
+            padding: calc($tilt-md + 3rem) 0 calc($tilt-md + 2rem);
+            
+            .container {
+                flex-flow: column;
+                .title {
+                    width: 100%;
+                    max-width: 250px;
+                    min-height: unset;
+
+                    img {
+                        width: auto;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    h2 {
+                        margin-left: 0;
+                        padding: 2rem;
+                    }
+                }
+                .text-wrap {
+                    margin-top: 2rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

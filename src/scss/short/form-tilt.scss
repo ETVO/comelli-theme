@@ -1,0 +1,105 @@
+$tilt: 25vh;
+$tilt-lg: 15vh;
+$tilt-md: 10vh;
+
+.short-form-tilt {
+    position: relative;
+
+    margin-top: calc(-1 * $tilt + 0.5rem);
+
+    .content {
+        background: #243740 linear-gradient(180deg, #4d5e66 0%, #243740 100%);
+        padding: calc($tilt + 3rem) 0;
+        padding-bottom: 3rem !important;
+        clip-path: polygon(0% $tilt, 100% 0%, 100% 100%, 0% 100%);
+
+        .container {
+            .title {
+                letter-spacing: -1.12px;
+                color: #ffe14d;
+                font-size: calc(1.5rem + 1.25vw);
+                font-weight: 600;
+            }
+
+            .form {
+                background-color: white;
+                width: 100%;
+                max-width: 540px;
+
+                padding: 2.5rem 1.75rem;
+                margin: 2rem 0;
+
+                border-radius: 40px;
+                
+                form {
+                    width: 100%;
+
+                    textarea {
+                        height: 100px;
+                    }
+
+                    .submit {
+                        position: relative;
+
+                        background: linear-gradient(0deg, #FAB319 0%, #FFE14D 100%);
+                        color: var(--bs-dark);
+                        padding: .5rem 1.35rem;
+                        border: none;
+                        font-weight: 600;
+                        z-index: 1;
+
+                        transition: background .2s;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            z-index: -1;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+
+                            background: linear-gradient(0deg, mix(white, #FAB319, 15%) 0%, mix(white, #FFE14D, 15%) 100%);
+                            border-radius: 50rem;
+                            
+                            opacity: 0;
+                            transition: opacity .2s;
+                        }
+                        
+                        span {
+                            -webkit-text-stroke: 1px var(--bs-dark);
+                        }
+                        
+                        &:hover, 
+                        &:active {
+
+                            &::before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .short-form-tilt {
+        margin-top: calc(-1 * $tilt-lg + 0.5rem);
+        .content {
+            padding: calc($tilt-lg + 3rem) 0;
+            clip-path: polygon(0% $tilt-lg, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    .short-form-tilt {
+        margin-top: calc(-1 * $tilt-md + 0.5rem);
+        .content {
+            padding: calc($tilt-md + 2rem) 0.25rem;
+            clip-path: polygon(0% $tilt-md, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}

@@ -1,5 +1,14 @@
 // Import partials
 @import "partials/header";
+@import "partials/footer";
+
+// Import short
+@import "short/empreemdestaque";
+@import "short/sbpe";
+@import "short/form-tilt";
+
+// Import other sheets
+@import "util";
 
 html {
     scroll-behavior: smooth;

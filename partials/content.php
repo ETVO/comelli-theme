@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Partial for default content rendering
  * 
@@ -9,7 +10,7 @@
 ?>
 
 <div class="content-wrap">
-    <?php 
-        the_content();
+    <?php
+    the_content();
     ?>
 </div>

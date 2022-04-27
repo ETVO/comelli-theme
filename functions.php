@@ -100,7 +100,6 @@ final class Theme_Functions
 		require_once($dir . 'walker/bs_menu_walker.php');
 		
 		require_once($dir . 'cpt/cpt-empreendimentos.php');
-		require_once($dir . 'cpt/cpt-arquivo.php');
 		
 		require_once($dir . 'customizer/customizer.php');
 		require_once($dir . 'kirki/kirki-installer-section.php');
@@ -241,7 +240,7 @@ final class Theme_Functions
 		$version = THEME_VERSION;
 
 		wp_enqueue_style('bootstrap-icons', $dir . 'bootstrap-icons/bootstrap-icons.css', [], "1.5.0", false);
-		wp_enqueue_style('raleway', $dir . 'Raleway/font.css', [], $version, false);
+		wp_enqueue_style('Montserrat', $dir . 'Montserrat/font.css', [], $version, false);
 	}
 
 	/**

@@ -1,0 +1,24 @@
+.btn-icon {
+    border-radius: 50rem;
+
+    display: flex;
+
+    * {
+        margin: auto;
+        line-height: 1;
+    }
+
+    span {
+        margin-left: .25rem;
+    }
+}
+
+.form {
+    .form-control {
+        border: none;
+        background-color: #F0F1F2;
+        border-radius: 20px;
+        color: #778388;
+        padding: .5rem 1.25rem;
+    }
+}

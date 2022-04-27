@@ -37,20 +37,9 @@ class Theme_Shortcodes {
         $dir = SHORTCODES_DIR;
         
         $codes = array(
-            'empreendimentos',
-            'spe',
-            'gpr_form',
-            'aboutus_banner',
-            'dna',
-            'parceiros',
-            'servicos',
-            'cultura',
-            'spe_long',
-            'acompanhamento',
-            'empreendimentos_list',
-            'cta_acesso',
-            'address_map',
-            'arquivos',
+            'empreemdestaque',
+            'sbpe',
+            'form-tilt',
         );
 
         // Add shortcodes
