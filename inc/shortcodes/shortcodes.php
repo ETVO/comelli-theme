@@ -40,6 +40,7 @@ class Theme_Shortcodes {
             'empreemdestaque',
             'sbpe',
             'form-tilt',
+            'quem-somos',
         );
 
         // Add shortcodes

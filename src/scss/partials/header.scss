@@ -68,6 +68,11 @@ header {
                     height: 1rem;
                 }
             }
+
+            &.active {
+                font-weight: 600;
+                color: #C78800;
+            }
         }
     }
 }

@@ -39,8 +39,9 @@ new \Kirki\Panel(
 );
 
 $sections = [
-    'rodape' => __('Rodapé'),
-    'contato' => __('Contato e Redes'),
+    'rodape'    => __('Rodapé'),
+    'contato'   => __('Contato e Redes'),
+    'about'     => __('Sobre Nós'),
 ];
 
 $section_title_class = 'customize-section-title';
@@ -162,4 +163,18 @@ new \Kirki\Field\Repeater(
             ],
 		],
     ]
+);
+
+
+
+/** ----- Sobre Nós ----- */
+
+$section = 'about';
+
+new \Kirki\Field\Editor(
+	[
+		'settings' => 'quem_somos',
+		'label'    => __('Quem Somos'),
+		'section'  => $section,
+	]
 );

@@ -1,0 +1,58 @@
+.short-quem-somos {
+    .content {
+        margin: 5rem 0 1rem;
+
+        .inner {
+            .text-wrap {
+                margin: auto;
+
+                .text {
+                    color: #243740;
+                    font-weight: 600;
+
+                    b,
+                    strong,
+                    a {
+                        font-weight: 700;
+                        color: #faaf19;
+                    }
+                }
+            }
+
+            .logo {
+                margin: auto;
+
+                img {
+                    width: 100%;
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
+
+// @media all and (min-width: 1400px) {
+//     .short-quem-somos {
+//         .content {
+
+//             .inner {
+
+//                 .logo {
+//                     margin: auto;
+
+//                     img {
+//                         width: 70%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@media all and (max-width: 992px) {
+    .short-quem-somos {
+        .content {
+            margin: 3rem 0 2rem;
+        }
+    }
+}
