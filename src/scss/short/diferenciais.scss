@@ -1,0 +1,65 @@
+.short-diferenciais {
+    margin: -$tilt 0;
+    .content {
+        height: 650px;
+        .inner {
+
+            height: 100%;
+
+            & > * {
+                padding: 0;
+            }
+
+            .text-wrap {
+                flex: 1;
+                display: flex;
+                background-color: #FFE14D;
+
+                padding: $tilt/2 0 0;
+                .text {
+                    margin: auto;
+
+                    h2 {
+                        font-weight: 600;
+                        letter-spacing: -1.12px;
+                        color: #243740;
+                        font-size: calc(1.325rem + 1.35vw);
+                    }
+
+                    .diferenciais {
+                        .item {
+                            display: flex;
+                            margin: .5rem 0;
+
+                            & > * {
+                                margin: auto 0;
+                            }
+
+                            .icon {
+                                margin-right: .75rem;
+                                color: #C78800;
+                                font-size: calc(1.3rem + 0.6vw);
+                            }
+
+                            .desc {
+                                color: #243740;
+                                font-size: 1.1rem;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .image {
+                flex: 1;
+
+                img {
+                    width: 100%;
+                    height: calc(100% - $tilt/2);
+                    object-fit: cover;
+                }
+            }
+        }
+    }    
+}

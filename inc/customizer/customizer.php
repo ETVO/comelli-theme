@@ -171,10 +171,72 @@ new \Kirki\Field\Repeater(
 
 $section = 'about';
 
+
+new \Kirki\Field\Generic(
+	[
+		'settings'    => 'quem_somos_title',
+		'section'     => $section,
+        'default'   => 'Quem Somos',
+		'choices'     => [
+			'element' => 'h3',
+			'class'   => $section_title_class,
+		],
+	]
+);
+
 new \Kirki\Field\Editor(
 	[
 		'settings' => 'quem_somos',
 		'label'    => __('Quem Somos'),
 		'section'  => $section,
 	]
+);
+
+new \Kirki\Field\Generic(
+	[
+		'settings'    => 'diferenciais_title',
+		'section'     => $section,
+        'default'   => 'Diferenciais',
+		'choices'     => [
+			'element' => 'h3',
+			'class'   => $section_title_class,
+		],
+	]
+);
+
+
+new \Kirki\Field\Repeater(
+    [
+        'settings'    => 'diferenciais_lista',
+		'label'       => __('Diferenciais'),
+		'section'     => $section,
+        'button_label' => esc_html__('Adicionar novo'),
+        'row_label' => [
+            'type'  => 'field',
+            'value' => __('Diferencial'),
+            'field' => 'desc',
+        ],
+		'default'     => [
+		],
+		'fields'      => [
+			'icon' => [
+                'type' => 'text',
+                'label' => __('Ícone'),
+                'description' => __('Utilize os ícones do') . ' Bootstrap Icons',
+            ],
+            'desc'  => [
+                'type' => 'text',
+                'label' => __('Descrição'),
+            ],
+		],
+    ]
+);
+
+new \Kirki\Field\Image(
+    [
+        'settings'  => 'diferenciais_image',
+        'label'     => esc_html__('Imagem'),
+        'section'   => $section,
+        'default'   => '',
+    ]
 );

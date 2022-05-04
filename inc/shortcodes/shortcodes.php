@@ -41,6 +41,8 @@ class Theme_Shortcodes {
             'sbpe',
             'form-tilt',
             'quem-somos',
+            'diferenciais',
+            'portfolio',
         );
 
         // Add shortcodes
