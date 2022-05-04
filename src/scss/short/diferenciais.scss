@@ -3,7 +3,6 @@
     .content {
         height: 650px;
         .inner {
-
             height: 100%;
 
             & > * {
@@ -11,11 +10,12 @@
             }
 
             .text-wrap {
-                flex: 1;
+                height: 100%;
                 display: flex;
-                background-color: #FFE14D;
+                background-color: #ffe14d;
 
-                padding: $tilt/2 0 0;
+                padding: $tilt/2 1rem 0;
+
                 .text {
                     margin: auto;
 
@@ -29,15 +29,15 @@
                     .diferenciais {
                         .item {
                             display: flex;
-                            margin: .5rem 0;
+                            margin: 0.5rem 0;
 
                             & > * {
                                 margin: auto 0;
                             }
 
                             .icon {
-                                margin-right: .75rem;
-                                color: #C78800;
+                                margin-right: 0.75rem;
+                                color: #c78800;
                                 font-size: calc(1.3rem + 0.6vw);
                             }
 
@@ -52,7 +52,7 @@
             }
 
             .image {
-                flex: 1;
+                height: 100%;
 
                 img {
                     width: 100%;
@@ -61,5 +61,72 @@
                 }
             }
         }
-    }    
+    }
+}
+
+@media all and (max-width: 992px) {
+    .short-diferenciais {
+        margin: -$tilt-md 0;
+
+        .content {
+            height: unset;
+
+            .inner {
+                background-color: #ffe14d;
+
+                .text-wrap {
+                    padding-top: calc($tilt-md + 2rem + 0.9vw);
+                    padding-bottom: 1rem;
+                }
+
+                .image {
+                    clip-path: polygon(0% $tilt-md, 100% 0%, 100% 100%, 0% 100%);
+
+                    img {
+                        display: block;
+                        max-height: 350px;
+                        object-position: bottom;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 576px) {
+    .short-diferenciais {
+        .content {
+            .inner {
+                .text-wrap {
+                    padding-left: 0.75rem;
+                    padding-right: 0.75rem;
+
+                    .text {
+                        .diferenciais {
+                            .item {
+                                .icon {
+                                    margin-right: 0.5rem;
+                                }
+                                .desc {
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 350px) {
+    .short-diferenciais {
+        .content {
+            .inner {
+                .text-wrap {
+                    padding-bottom: .25rem;
+                }
+            }
+        }
+    }
 }

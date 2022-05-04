@@ -1,0 +1,125 @@
+.short-portfolio {
+    background-color: #BBC2C5;
+    padding: calc($tilt + 1rem) 0;
+    padding-bottom: 3rem !important;
+    clip-path: polygon(0% $tilt, 100% 0%, 100% 100%, 0% 100%);
+
+    .title {
+        font-size: calc(1.5rem + 1.5vw);
+        font-weight: 600;
+        color: #243740;
+    }
+
+    .items {
+        padding: 1.5rem 0.5rem 2.5rem;
+        align-items: stretch;
+        .item {
+            max-width: 400px;
+            .inner {
+                height: 100%;
+
+                background-color: white;
+                border: 1px solid #a5aeb2;
+                box-shadow: 0px 6px 20px #0000001a;
+                border-radius: 20px;
+                overflow: hidden;
+                display: flex;
+                flex-flow: column;
+
+                .image {
+                    position: relative;
+
+                    .tag {
+                        position: absolute;
+                        top: 0.75rem;
+                        right: 0.6rem;
+                        padding: 0.25rem 0.75rem;
+                        background-color: rgba(#243740, 0.75);
+                        color: white;
+                        border-radius: 50rem;
+                        font-size: 0.8rem;
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                .content {
+
+                    border-top: 1px solid #a5aeb2;
+                    padding: 1rem;
+
+                    flex: 1;
+                    display: flex;
+                    flex-flow: column;
+
+                    .name {
+                        color: #005f8f;
+                        font-weight: 700;
+                        font-size: 1.35rem;
+                        margin-bottom: 0;
+
+                        transition: color 0.2s;
+
+                        &:hover,
+                        &:active {
+                            color: mix(white, #005f8f, 25%);
+                        }
+                    }
+
+                    .local {
+                        margin-bottom: 1rem;
+                        .text {
+                            font-size: 0.8rem;
+                            letter-spacing: 0.8px;
+                            font-weight: 500;
+                            color: #828e93;
+                        }
+                    }
+
+                    .action {
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        flex: 1;
+                        a {
+                            margin: auto;
+                            margin-bottom: 0;
+                            padding: 0.5rem 1.75rem;
+                            background-color: #4d5e66;
+                            color: white;
+                            font-size: 0.9rem;
+
+                            transition: background-color 0.2s;
+
+                            &:hover,
+                            &:active {
+                                background-color: mix(white, #4d5e66, 15%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media all and (max-width: 1200px) {
+    .short-portfolio {
+        margin-top: calc(-1 * $tilt-lg + 0.5rem);
+        padding: calc($tilt-lg + 3rem) 0;
+        clip-path: polygon(0% $tilt-lg, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+
+@media all and (max-width: 992px) {
+    .short-portfolio {
+        margin-top: calc(-1 * $tilt-md + 0.5rem);
+        padding: calc($tilt-md + 2rem) 0.25rem;
+        clip-path: polygon(0% $tilt-md, 100% 0%, 100% 100%, 0% 100%);
+    }
+}

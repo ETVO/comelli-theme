@@ -13,7 +13,7 @@ function diferenciais($attrs)
     <section class="short-diferenciais">
         <div class="content">
             <div class="inner row w-100 m-0">
-                <div class="col-6 text-wrap">
+                <div class="col-12 col-lg-6 text-wrap">
                     <div class="text">
                         <h2 class="mb-4">Diferenciais</h2>
                         <div class="diferenciais">
@@ -26,7 +26,7 @@ function diferenciais($attrs)
                         </div>
                     </div>
                 </div>
-                <div class="col-6 image">
+                <div class="col-12 col-lg-6 image">
                     <img src="<?php echo get_theme_mod('diferenciais_image') ?>" alt="">
                 </div>
             </div>

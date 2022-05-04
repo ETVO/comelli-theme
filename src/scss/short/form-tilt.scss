@@ -95,8 +95,22 @@
     .short-form-tilt {
         margin-top: calc(-1 * $tilt-md + 0.5rem);
         .content {
-            padding: calc($tilt-md + 2rem) 0.25rem;
+            padding: calc($tilt-md + 2rem) 0;
             clip-path: polygon(0% $tilt-md, 100% 0%, 100% 100%, 0% 100%);
+        }
+    }
+}
+
+@media all and (max-width: 350px) {
+    .short-form-tilt {
+        .content {
+            .container {
+                padding-left: .5rem;
+                padding-right: .5rem;
+                .form {
+                    padding: 2rem .75rem;
+                }
+            }
         }
     }
 }

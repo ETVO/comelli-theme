@@ -1,6 +1,7 @@
 // Import partials
 @import "partials/header";
 @import "partials/footer";
+@import "partials/blog";
 
 // Import short
 @import "short/empreemdestaque";
@@ -8,6 +9,8 @@
 @import "short/form-tilt";
 @import "short/quem-somos";
 @import "short/diferenciais";
+@import "short/portfolio";
+@import "short/empreendimentos";
 
 // Import other sheets
 @import "util";

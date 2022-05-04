@@ -1,26 +1,27 @@
 <?php
 /**
- * Search results template
+ * Partial for blog page rendering
  * 
  * @package WordPress
+ * @subpackage CF-Theme
  */
 
-get_header();
-
-$search_query = get_search_query();
-$title = "Resultados para <b>'$search_query'</b>";
+$title = "Blog Comelli";
 
 ?>
 
 <div class="blog-wrap">
-    <div class="container col-lg-10 col-xl-9 py-5 mx-auto">
+    <div class="container  col-md-10 col-lg-9 mx-auto py-5">
         <div class="heading row pb-3">
             <div class="row col-12 mb-3 col-md-auto mb-md-0">
                 <div class="col-auto my-auto">
-                    <div class="search-title m-auto text-center text-lg-start">
-                        <h2 class="m-0">
-                            <?php echo $title; ?>
-                        </h2>
+                    <h2 class="title m-auto text-center text-lg-start m-0">
+                        <?php echo $title; ?>
+                    </h2>
+                </div>
+                <div class="col-auto my-auto">
+                    <div class="categories">
+                        <?php get_template_part("partials/blog/categories"); ?>
                     </div>
                 </div>
             </div>
@@ -33,7 +34,3 @@ $title = "Resultados para <b>'$search_query'</b>";
         </div>
     </div>
 </div>
-
-<?php
-
-get_footer();

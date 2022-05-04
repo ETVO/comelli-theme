@@ -43,6 +43,7 @@ class Theme_Shortcodes {
             'quem-somos',
             'diferenciais',
             'portfolio',
+            'empreendimentos',
         );
 
         // Add shortcodes

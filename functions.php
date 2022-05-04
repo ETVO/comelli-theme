@@ -143,6 +143,11 @@ final class Theme_Functions
 			return $classes;
 		}, 1, 3);
 
+		function new_excerpt_more($more) {
+			return '...';
+		}
+		add_filter('excerpt_more', 'new_excerpt_more');
+
 		// Enable support for Post Formats.
 		add_theme_support( 'post-formats', array( 'video', 'gallery', 'audio', 'quote', 'link' ) );
 
