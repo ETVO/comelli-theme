@@ -31,7 +31,7 @@ function empreendimentos($attrs)
     if ($query->have_posts()) {
 ?>
 
-        <section class="short-empreendimentos py-5">
+        <section class="short-empreendimentos py-md-5">
             <div class="container col-lg-9 mx-auto">
                 <div class="items">
                     <?php

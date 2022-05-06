@@ -109,7 +109,7 @@ function empreemdestaque($attrs)
                 </div>
 
                 <div class="view-all">
-                    <a href="">ver todos</a>
+                    <a href="<?php echo get_permalink(get_theme_mod('empreendimentos_page')); ?>">ver todos</a>
                 </div>
             </div>
         </section>
