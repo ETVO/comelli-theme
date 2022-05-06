@@ -2,17 +2,25 @@
 
 function form_tilt($attrs)
 {
-    $attrs = shortcode_atts(array(), $attrs);
+    $attrs = shortcode_atts(array(
+        'clip' => 'top',
+        'title' => 'Entre em contato',
+        'background' => 'gradient',
+    ), $attrs);
+
+    $clip = $attrs['clip'];
+    $title = $attrs['title'];
+    $background = $attrs['background'];
 
     ob_start(); // Start HTML buffering
 
 ?>
 
-    <section class="short-form-tilt">
+    <section class="short-form-tilt <?php echo "clip-$clip background-$background"; ?>">
         <div class="content">
             <div class="container">
                 <h2 class="title text-center">
-                    Entre em contato
+                    <?php echo $title; ?>
                 </h2>
                 <div class="d-flex">
                     <div class="form mx-auto">

@@ -6,7 +6,7 @@ function portfolio($attrs)
 
     $post_type = 'empreendimento';
     $orderby = 'date';
-    $order = 'ASC';
+    $order = 'DESC';
 
     // Posts Per Page (-1 means it shows all)
     $ppp = -1;

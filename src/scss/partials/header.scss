@@ -69,9 +69,10 @@ header {
                 }
             }
 
-            &.active {
+        }
+        &.current-menu-item, &.archive-menu-item {
+            .nav-link {
                 font-weight: 600;
-                // color: var(--bs-primary);
             }
         }
     }

@@ -1,14 +1,39 @@
-
 .short-form-tilt {
     position: relative;
+    z-index: 1;
 
-    margin-top: calc(-1 * $tilt + 0.5rem);
+    &.clip {
+        &-top {
+            margin-top: calc(-1 * $tilt + 0.5rem);
+
+            .content {
+                clip-path: polygon(0% $tilt, 100% 0%, 100% 100%, 0% 100%);
+                padding: calc($tilt + 2rem) 0;
+                padding-bottom: 3rem !important;
+            }
+        }
+        &-bottom {
+            margin-bottom: calc(-1 * $tilt);
+
+            .content {
+                clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - $tilt), 0% 100%);
+                padding: calc($tilt + .5rem) 0;
+                padding-top: 5rem !important;
+            }
+        }
+    }
+
+    &.background {
+        &-solid .content {
+            background: #243740;
+        }
+
+        &-gradient .content {
+            background: #243740 linear-gradient(180deg, #4d5e66 0%, #243740 100%);
+        }
+    }
 
     .content {
-        background: #243740 linear-gradient(180deg, #4d5e66 0%, #243740 100%);
-        padding: calc($tilt + 3rem) 0;
-        padding-bottom: 3rem !important;
-        clip-path: polygon(0% $tilt, 100% 0%, 100% 100%, 0% 100%);
 
         .container {
             .title {
@@ -23,11 +48,11 @@
                 width: 100%;
                 max-width: 540px;
 
-                padding: 2.5rem 1.75rem;
+                padding: 1.5rem 1.75rem;
                 margin: 2rem 0;
 
                 border-radius: 40px;
-                
+
                 form {
                     width: 100%;
 
@@ -38,17 +63,17 @@
                     .submit {
                         position: relative;
 
-                        background: linear-gradient(0deg, #FAB319 0%, #FFE14D 100%);
+                        background: linear-gradient(0deg, #fab319 0%, #ffe14d 100%);
                         color: var(--bs-dark);
-                        padding: .5rem 1.35rem;
+                        padding: 0.5rem 1.35rem;
                         border: none;
                         font-weight: 600;
                         z-index: 1;
 
-                        transition: background .2s;
+                        transition: background 0.2s;
 
                         &::before {
-                            content: '';
+                            content: "";
                             position: absolute;
                             z-index: -1;
                             top: 0;
@@ -56,20 +81,23 @@
                             width: 100%;
                             height: 100%;
 
-                            background: linear-gradient(0deg, mix(white, #FAB319, 15%) 0%, mix(white, #FFE14D, 15%) 100%);
+                            background: linear-gradient(
+                                0deg,
+                                mix(white, #fab319, 15%) 0%,
+                                mix(white, #ffe14d, 15%) 100%
+                            );
                             border-radius: 50rem;
-                            
+
                             opacity: 0;
-                            transition: opacity .2s;
+                            transition: opacity 0.2s;
                         }
-                        
+
                         span {
                             -webkit-text-stroke: 1px var(--bs-dark);
                         }
-                        
-                        &:hover, 
-                        &:active {
 
+                        &:hover,
+                        &:active {
                             &::before {
                                 opacity: 1;
                             }
@@ -83,20 +111,48 @@
 
 @media all and (max-width: 1200px) {
     .short-form-tilt {
-        margin-top: calc(-1 * $tilt-lg + 0.5rem);
-        .content {
-            padding: calc($tilt-lg + 3rem) 0;
-            clip-path: polygon(0% $tilt-lg, 100% 0%, 100% 100%, 0% 100%);
+
+        &.clip {
+            &-top {
+                margin-top: calc(-1 * $tilt-lg + 0.5rem);
+
+                .content {
+                    clip-path: polygon(0% $tilt-lg, 100% 0%, 100% 100%, 0% 100%);
+                    padding: calc($tilt-lg + 2rem) 0;
+                }
+            }
+            &-bottom {
+                margin-bottom: calc(-1 * $tilt-lg);
+
+                .content {
+                    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - $tilt-lg), 0% 100%);
+                    padding: calc($tilt-lg + .5rem) 0;
+                }
+            }
         }
     }
 }
 
 @media all and (max-width: 992px) {
     .short-form-tilt {
-        margin-top: calc(-1 * $tilt-md + 0.5rem);
-        .content {
-            padding: calc($tilt-md + 2rem) 0;
-            clip-path: polygon(0% $tilt-md, 100% 0%, 100% 100%, 0% 100%);
+
+        &.clip {
+            &-top {
+                margin-top: calc(-1 * $tilt-md + 0.5rem);
+
+                .content {
+                    clip-path: polygon(0% $tilt-md, 100% 0%, 100% 100%, 0% 100%);
+                    padding: calc($tilt-md + 2rem) 0;
+                }
+            }
+            &-bottom {
+                margin-bottom: calc(-1 * $tilt-md);
+
+                .content {
+                    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - $tilt-md), 0% 100%);
+                    padding: calc($tilt-md + .5rem) 0;
+                }
+            }
         }
     }
 }
@@ -105,10 +161,10 @@
     .short-form-tilt {
         .content {
             .container {
-                padding-left: .5rem;
-                padding-right: .5rem;
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
                 .form {
-                    padding: 2rem .75rem;
+                    padding: 2rem 0.75rem;
                 }
             }
         }

@@ -3,7 +3,6 @@
         .item {
             .inner {
                 .images {
-                    
                     img {
                         width: 100%;
                         border-radius: 20px;
@@ -34,12 +33,20 @@
 
                 .content {
                     flex: 1;
+                    margin: auto .75rem auto 2rem;
 
                     .name {
                         letter-spacing: -0.1rem;
                         font-size: calc(1.375rem + 1.1vw);
                         font-weight: 600;
                         color: #243740;
+
+                        transition: color 0.2s;
+
+                        &:hover,
+                        &:active {
+                            color: mix(white, #243740, 15%);
+                        }
                     }
 
                     .local {
@@ -97,6 +104,13 @@
                         font-size: 0.9rem;
                         color: white;
                         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+
+                        transition: background-color .2s;
+
+                        &:hover,
+                        &:active {
+                            background-color: mix(white, #005f8f, 15%);
+                        }
                     }
                 }
             }
@@ -109,6 +123,27 @@
         .items {
             .item {
                 .inner {
+                    .content {
+                        margin: 2rem .75rem 0;
+                    }
+                    .action {
+                        border-bottom-width: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 350px) {
+    .short-empreendimentos {
+        .items {
+            .item {
+                .inner {
+                    .content {
+                        margin: 2rem 0 0;
+                    }
                     .action {
                         border-bottom-width: 1px;
                     }

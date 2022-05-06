@@ -1,0 +1,110 @@
+
+.short-localizacao {
+    position: relative;
+    z-index: 0;
+
+    iframe {
+        width: 100%;
+        min-height: calc(350px + $tilt);
+        height: 100%;
+        margin-bottom: -.5rem;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 200px;
+        height: 100%;
+        background-color: rgba(#4D5E66, .9);
+        padding: 2rem;
+
+        display: flex;
+
+        .inner {
+            margin: auto auto 2rem;
+
+            .logo {
+                // margin-bottom: 1.5rem;
+
+                img {
+                    max-width: 100%;
+                    width: 250px;
+                }
+            }
+
+            .address {
+                color: white;
+                font-size: .9rem;
+                font-weight: 500;
+                white-space: pre-line;
+            }
+
+            .action {
+                
+
+                a {
+                    display: block;
+                    padding: .5rem 1rem;
+                    
+                    text-align: center;
+                    text-transform: lowercase;
+                    font-size: .9rem;
+                    
+                    border: solid 2px #FFE14D;
+                    color: #FFE14D;
+                    border-radius: 50rem;
+
+                    transition: background-color .2s;
+
+                    &:hover,
+                    &:active {
+                        background-color: mix(transparent, #FFE14D, 95%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:992px) {
+    .short-localizacao {
+        .overlay {
+            left: 100px;
+        }
+    }
+}
+
+@media all and (max-width:767px) {
+    .short-localizacao {
+
+        iframe {
+            height: 250px;
+        }
+
+        .overlay {
+            position: relative;
+            left: 0;
+            max-width: unset;
+            width: 100%;
+            // height: ;
+
+            padding: calc($tilt-md + 1rem) 1rem 3rem;
+
+            .inner {
+                margin: auto;
+            }
+
+            .logo {
+                text-align: center;
+                svg, img {
+                    
+                    max-width: 190px;
+                }
+            }
+
+            .address {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -32,7 +32,7 @@ function empreendimentos($attrs)
 ?>
 
         <section class="short-empreendimentos py-5">
-            <div class="container col-md-10 col-lg-9 mx-auto">
+            <div class="container col-lg-9 mx-auto">
                 <div class="items">
                     <?php
                     while ($query->have_posts()) :
@@ -78,8 +78,8 @@ function empreendimentos($attrs)
                                 </div>
 
                                 <div class="col-12 col-md-6 content d-flex">
-                                    <div class="pt-4 pt-md-0 m-auto">
-                                        <a href="">
+                                    <div class="">
+                                        <a href="<?php echo $permalink; ?>">
                                             <h4 class="name"><?php echo $name; ?></h4>
                                         </a>
                                         <small class="local d-block mt-3 mb-3 mb-md-4 mb-lg-5">

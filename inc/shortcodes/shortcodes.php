@@ -44,6 +44,7 @@ class Theme_Shortcodes {
             'diferenciais',
             'portfolio',
             'empreendimentos',
+            'localizacao',
         );
 
         // Add shortcodes

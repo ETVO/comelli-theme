@@ -39,9 +39,10 @@ new \Kirki\Panel(
 );
 
 $sections = [
-    'rodape'    => __('Rodapé'),
-    'contato'   => __('Contato e Redes'),
-    'about'     => __('Sobre Nós'),
+    'rodape'            => __('Rodapé'),
+    'about'             => __('Sobre Nós'),
+    'contato'           => __('Contato'),
+    'empreendimentos'   => __('Empreendimentos'),
 ];
 
 $section_title_class = 'customize-section-title';
@@ -77,16 +78,11 @@ new \Kirki\Field\Image(
 );
 
 
-
-/** ----- Contato e Redes ----- */
-
-$section = 'contato';
-
 new \Kirki\Field\Generic(
 	[
 		'settings'    => 'contato_title',
 		'section'     => $section,
-        'default'   => 'Contato',
+        'default'   => 'Contatos',
 		'choices'     => [
 			'element' => 'h3',
 			'class'   => $section_title_class,
@@ -166,7 +162,6 @@ new \Kirki\Field\Repeater(
 );
 
 
-
 /** ----- Sobre Nós ----- */
 
 $section = 'about';
@@ -239,4 +234,53 @@ new \Kirki\Field\Image(
         'section'   => $section,
         'default'   => '',
     ]
+);
+
+
+
+/** ----- Contato ----- */
+
+$section = 'contato';
+
+new \Kirki\Field\Generic(
+	[
+		'settings'    => 'local_title',
+		'section'     => $section,
+        'default'   => 'Localização',
+		'choices'     => [
+			'element' => 'h3',
+			'class'   => $section_title_class,
+		],
+	]
+);
+
+new \Kirki\Field\Image(
+    [
+        'settings'  => 'local_logo',
+        'label'     => esc_html__('Logo'),
+        'section'   => $section,
+        'default'   => '',
+    ]
+);
+
+new \Kirki\Field\Textarea(
+	[
+		'settings' => 'endereco',
+		'label'    => __('Endereço'),
+		'section'  => $section,
+	]
+);
+
+
+
+/** ----- Empreendimentos ----- */
+
+$section = 'empreendimentos';
+
+new \Kirki\Field\Dropdown_Pages(
+	[
+		'settings' => 'empreendimentos_page',
+		'label'    => __( 'Página de Empreendimentos'),
+		'section'  => $section,
+	]
 );

@@ -6,7 +6,7 @@
  * @subpackage CF-Theme
  */
 
-$title = "Blog Comelli";
+$title = "Blog";
 
 ?>
 
