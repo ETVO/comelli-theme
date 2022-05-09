@@ -23,8 +23,7 @@ function sbpe($attrs)
                     </div>
                     <div class="text-wrap">
                         <div class="text">
-                            <p>Com o SBPE você compra seu <b>imóvel novo</b> com até 35 anos para pagar.</p>
-                            <p>A modalidade permite um financiamento de até <b>80% do valor do imóvel</b>, utilizando a poupança como recurso de compra.</p>
+                            <?php echo get_theme_mod('sbpe_text'); ?>
                         </div>
                     </div>
                 </div>
