@@ -84,12 +84,12 @@ $no_posts_found = "Nenhum post foi encontrado...";
             ?>
 
                     <div class="post row my-4">
-                        <div class="image col-4">
+                        <div class="image col-6 col-lg-4">
                             <a href="<?php echo $permalink; ?>">
-                                <img class="w-100" src="<?php echo $image['url']; ?>" alt="<?php echo $image['caption']; ?>">
+                                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['caption']; ?>">
                             </a>
                         </div>
-                        <div class="content col-8">
+                        <div class="content col-12 col-lg-8">
                             <h5 class="title">
                                 <a class="" href="<?php echo $permalink; ?>">
                                     <?php echo $title; ?>

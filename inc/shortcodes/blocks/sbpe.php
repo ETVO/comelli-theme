@@ -15,7 +15,11 @@ function sbpe($attrs)
                 <div class="d-flex m-auto flex-column flex-lg-row">
                     <div class="title">
                         <img src="<?php echo THEME_IMG_URI . 'sbpe-frame.svg'; ?>" alt="">
-                        <h2>Financie<br>com <span>SBPE</span></h2>
+                        <h2>
+                            Financie
+                            <br>
+                            com <span>SBPE</span>
+                        </h2>
                     </div>
                     <div class="text-wrap">
                         <div class="text">

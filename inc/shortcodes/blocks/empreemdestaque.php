@@ -70,7 +70,7 @@ function empreemdestaque($attrs)
                                 </div>
 
                                 <div class="content">
-                                    <a href="">
+                                    <a href="<?php echo $permalink; ?>">
                                         <h4 class="name"><?php echo $name; ?></h4>
                                     </a>
                                     <small class="local d-block">

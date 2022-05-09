@@ -40,6 +40,7 @@ new \Kirki\Panel(
 
 $sections = [
     'rodape'            => __('Rodapé'),
+    'inicio'            => __('Início'),
     'about'             => __('Sobre Nós'),
     'contato'           => __('Contato'),
     'empreendimentos'   => __('Empreendimentos'),
@@ -159,6 +160,33 @@ new \Kirki\Field\Repeater(
             ],
 		],
     ]
+);
+
+
+
+
+/** ----- Rodapé ----- */
+
+$section = 'inicio';
+
+new \Kirki\Field\Generic(
+	[
+		'settings'    => 'sbpe_title',
+		'section'     => $section,
+        'default'   => 'SBPE',
+		'choices'     => [
+			'element' => 'h3',
+			'class'   => $section_title_class,
+		],
+	]
+);
+
+new \Kirki\Field\Editor(
+	[
+		'settings' => 'sbpe_text',
+		'label'    => __('Texto SBPE'),
+		'section'  => $section,
+	]
 );
 
 

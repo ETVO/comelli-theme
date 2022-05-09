@@ -25,6 +25,19 @@ $address_url = "https://google.com/maps/place/" . htmlspecialchars(strip_tags(st
 
 ?>
 
+<div class="cookies-consent" id="cookiePopup">
+    <div class="heading">
+        <img src="<?php echo get_site_icon_url(); ?>">
+        <b>Este site utiliza cookies.</b>
+    </div>
+    <div class="text">
+        Ao navegar, você está concordando com o armazenamento e uso de cookies em nosso site.
+    </div>
+    <div class="action">
+        <button class="btn btn-outline-primary" id="cookieAccept">aceitar</button>
+    </div>
+</div>
+
 <footer>
     <div class="footer-content py-5">
         <div class="container">

@@ -25,6 +25,7 @@ header {
 
     .menu-item {
         padding: .5rem .75rem !important;
+        
         .nav-link {
             padding: 0 !important;
             padding-left: .5rem !important;
@@ -72,6 +73,7 @@ header {
         }
         &.current-menu-item, &.archive-menu-item {
             .nav-link {
+                color: #C78800;
                 font-weight: 600;
             }
         }

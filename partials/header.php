@@ -8,7 +8,7 @@
 ?>
 
 <header class="navbar navbar-expand-lg" id="header">
-    <div class="container my-1">
+    <div class="container">
         <div class="navbar-brand me-auto p-0 my-3">
             <?php the_custom_logo(); ?>
         </div>
