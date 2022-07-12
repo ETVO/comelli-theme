@@ -50,20 +50,22 @@ function empreemdestaque($attrs)
                         $image_alt = get_the_post_thumbnail_caption();
 
 
-                        $lancamento = get_field('lancamento');
+                        $etiqueta = get_field('etiqueta')['texto'];
+                        
                         $localizacao = get_field('localizacao');
-                        $area = get_field('area');
-                        $dormitorios = get_field('dormitorios');
-                        $banheiros = get_field('banheiros');
+                        $icones = get_field('icones');
+                        $area = get_field('icones')['area'];
+                        $dormitorios = get_field('icones')['dormitorios'];
+                        $banheiros = get_field('icones')['banheiros'];
 
                     ?>
 
                         <div class="item mx-auto col-12 col-sm-6 col-xl-4">
                             <div class="inner">
                                 <div class="image">
-                                    <?php if ($lancamento) : ?>
+                                    <?php if ($etiqueta != '') : ?>
                                         <span class="tag">
-                                            lançamento
+                                            <?php echo $etiqueta; ?>
                                         </span>
                                     <?php endif; ?>
                                     <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>">

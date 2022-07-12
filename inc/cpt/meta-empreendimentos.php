@@ -36,7 +36,7 @@ class Meta_Empreendimentos
         // Limit meta box to certain post types.
         $allowed_post_type = 'empreendimento';
 
-        $box_label = __('Características em Destaque');
+        $box_label = __('Características em Destaque (exibidas na página "Empreendimentos")');
         $metabox_name = 'empreendimento_destaque';
 
         if ($post_type == $allowed_post_type) {

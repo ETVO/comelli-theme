@@ -9,9 +9,22 @@
                         object-fit: cover;
                     }
 
-                    .highlight img {
-                        height: 100%;
-                        border-top-right-radius: 60px;
+                    .highlight {
+                        position: relative;
+                        .tag {
+                            position: absolute;
+                            top: 0.75rem;
+                            left: 1.25rem;
+                            padding: 0.25rem 0.75rem;
+                            background-color: rgba(#FAAF19, 0.75);
+                            color: white;
+                            border-radius: 50rem;
+                            font-size: 1rem;
+                        }
+                        img {
+                            height: 100%;
+                            border-top-right-radius: 60px;
+                        }
                     }
 
                     .ratio {
@@ -33,7 +46,7 @@
 
                 .content {
                     flex: 1;
-                    margin: auto .75rem auto 2rem;
+                    margin: auto 0.75rem auto 2rem;
 
                     .name {
                         letter-spacing: -0.1rem;
@@ -105,7 +118,7 @@
                         color: white;
                         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 
-                        transition: background-color .2s;
+                        transition: background-color 0.2s;
 
                         &:hover,
                         &:active {
@@ -124,7 +137,7 @@
             .item {
                 .inner {
                     .content {
-                        margin: 2rem .75rem 0;
+                        margin: 2rem 0.75rem 0;
                     }
                     .action {
                         border-bottom-width: 1px;
@@ -134,7 +147,6 @@
         }
     }
 }
-
 
 @media all and (max-width: 350px) {
     .short-empreendimentos {

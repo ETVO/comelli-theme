@@ -48,14 +48,16 @@ function empreendimentos($attrs)
                         $image_alt = get_the_post_thumbnail_caption();
 
 
-                        $lancamento = get_field('lancamento');
                         $endereco = get_field('endereco');
-                        $area = get_field('area');
-                        $dormitorios = get_field('dormitorios');
-                        $banheiros = get_field('banheiros');
+                        $area = get_field('icones')['area'];
+                        $dormitorios = get_field('icones')['dormitorios'];
+                        $banheiros = get_field('icones')['banheiros'];
                         $images = get_field('imagens');
 
                         $destaque = get_post_meta(get_the_ID(), 'empreendimento_destaque', true);
+
+                        $etiqueta = get_field('etiqueta')['texto'];
+                        $exibir_etiqueta = get_field('etiqueta')['exibir_empreendimentos'];
 
                     ?>
 
@@ -63,6 +65,11 @@ function empreendimentos($attrs)
                             <div class="inner row">
                                 <div class="col-12 col-md-6 images row g-2 g-md-3 m-0">
                                     <div class="col-12 highlight mt-0">
+                                    <?php if ($exibir_etiqueta && $etiqueta != '') : ?>
+                                        <span class="tag">
+                                            <?php echo $etiqueta; ?>
+                                        </span>
+                                    <?php endif; ?>
                                         <img src="<?php echo $images['imagem_1']['url']; ?>" alt="<?php echo $images['imagem_1']['caption']; ?>">
                                     </div>
                                     <div class="col-6">
